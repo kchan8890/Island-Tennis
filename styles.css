@@ -258,10 +258,12 @@ img, svg { display: block; max-width: 100%; }
 .book-form .btn-block { grid-column: 1 / -1; }
 label { font-weight: 700; font-size: 0.85rem; }
 input, select, textarea {
+  width: 100%; min-width: 0; max-width: 100%;
   font-family: 'Archivo', sans-serif; font-size: 1rem; padding: 12px 14px;
   border: 2px solid var(--line); border-radius: 12px; background: var(--paper); color: var(--ink);
   transition: border-color .15s ease;
 }
+select { text-overflow: ellipsis; }
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--court); }
 .form-msg { grid-column: 1 / -1; font-weight: 700; }
 .form-msg.ok { color: #1a7a3f; }
@@ -402,5 +404,16 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--c
   .btn-sm { display: none; }
 }
 @media (max-width: 560px) {
-  .book-form { grid-template-columns: 1fr; }
+  .book-form { grid-template-columns: 1fr; padding: 20px; }
+  .book-aside { padding: 22px; }
+  .section { padding: 60px 5vw; }
+  .section-head { margin-bottom: 34px; }
+  .spotlight-body { padding: 24px 22px; }
+  .spotlight-photo { min-height: 280px; }
+  .spotlight-initials { font-size: 4.4rem; }
+  .shop-tab { padding: 9px 16px; font-size: 0.8rem; }
+  .hero { padding: 54px 6vw 70px; }
+  .hero-stats { gap: 22px; }
+  .calendar { padding: 10px; }
+  .cal-cell { font-size: 0.85rem; }
 }
