@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Island Tennis — Coaching, Lessons & Crush Merch</title>
+  <meta name="description" content="Island Tennis is a tennis coaching brand. Meet the coaches, book lessons, and shop our Crush apparel line." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/turtle.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">ISLAND TENNIS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#book">Book</a>
+      <a href="#shop">Shop</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="#book" class="btn btn-sm">Book a Lesson</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="court-lines" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Island Tennis · Coaching Built Different</p>
+        <h1 class="hero-title">PLAY HARD.<br /><span>CRUSH IT.</span></h1>
+        <p class="hero-sub">Premium tennis coaching for every level. Learn from a team that moves with power, patience, and the steady grit of a sea turtle that never quits.</p>
+        <div class="hero-cta">
+          <a href="#book" class="btn">Book a Lesson</a>
+          <a href="#shop" class="btn btn-ghost">Shop Merch</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1,200+</strong><span>Lessons Coached</span></div>
+          <div><strong>15</strong><span>Years on Court</span></div>
+          <div><strong>4.9★</strong><span>Player Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <div class="turtle-badge" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section-head">
+      <span class="tag">Meet the Founder</span>
+      <h2>The story behind <span class="accent">Island Tennis</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo" role="img" aria-label="Sentosa, Singapore — the island home of Island Tennis"></div>
+      <div class="about-text">
+        <p>Island Tennis started on a single public court with one belief: every player has a fiercer game inside them waiting to break out. We coach for that moment — when technique, mindset, and momentum collide and you simply <em>crush it</em>.</p>
+        <p>Our mascot, the sea turtle, says everything about how we coach. Calm under pressure. Relentless over the long haul. Powerful when it matters most. We build players who last — not just for one match, but for a lifetime of the game. That same spirit lives in <strong>Crush</strong>, our court-ready apparel line.</p>
+        <ul class="about-list">
+          <li>USPTA-certified coaching philosophy</li>
+          <li>Personalized development plans for every player</li>
+          <li>Junior, adult, and competitive programs</li>
+        </ul>
+        <a href="#book" class="btn">Train With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHES -->
+  <section class="section coaches" id="coaches">
+    <div class="section-head">
+      <span class="tag">The Team</span>
+      <h2>Your <span class="accent">Coaches</span></h2>
+      <p class="section-lead">A roster built to sharpen every part of your game — from first serve to match point.</p>
+    </div>
+    <article class="coach-spotlight" id="coachSpotlight"></article>
+    <h3 class="coach-subhead">The Coaching Team</h3>
+    <div class="coach-grid" id="coachGrid"></div>
+  </section>
+
+  <!-- ISLAND BAND -->
+  <section class="island-band" aria-label="Island lifestyle">
+    <div class="island-band-inner">
+      <span class="tag">Our Island Home</span>
+      <h2>Tennis in <span class="accent">Paradise</span></h2>
+      <p>From Sentosa's shoreline to the heart of the city, Island Tennis brings world-class coaching to the place we love most. Come train where the island meets the game.</p>
+      <a href="#book" class="btn">Book Your Court</a>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="section book" id="book">
+    <div class="section-head">
+      <span class="tag">New Clients</span>
+      <h2>Book Your <span class="accent">First Lesson</span></h2>
+      <p class="section-lead">New to Island Tennis? Pick a location, choose a date on the calendar, and lock in your intro session. We'll confirm by email.</p>
+    </div>
+    <div class="book-wrap">
+      <form class="book-form" id="bookForm" novalidate>
+
+        <div class="field field-full">
+          <label for="bLocation">1 · Your location / preferred area</label>
+          <input id="bLocation" name="location" type="text" placeholder="e.g. Sentosa — Tanjong Beach, or your preferred court / area" required />
+        </div>
+
+        <div class="field">
+          <label for="bCoach">2 · Preferred coach</label>
+          <select id="bCoach" name="coach" required></select>
+        </div>
+        <div class="field">
+          <label for="bType">Intro lesson type</label>
+          <select id="bType" name="type" required>
+            <option value="">Select…</option>
+            <option>Intro Private (1-on-1) — $90/hr</option>
+            <option>Intro Semi-Private (2 players) — $60/hr</option>
+            <option>Junior Intro (under 16) — $50/hr</option>
+            <option>Skills Assessment — $70/hr</option>
+          </select>
+        </div>
+
+        <div class="field field-full">
+          <label>3 · Pick a date</label>
+          <div class="calendar" id="calendar">
+            <div class="cal-head">
+              <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">‹</button>
+              <strong id="calLabel"></strong>
+              <button type="button" class="cal-nav" id="calNext" aria-label="Next month">›</button>
+            </div>
+            <div class="cal-dow"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <input type="hidden" id="bDate" name="date" required />
+        </div>
+
+        <div class="field field-full">
+          <label>4 · Pick a time <span class="sel-date" id="selDateLabel"></span></label>
+          <div class="time-slots" id="timeSlots"></div>
+          <input type="hidden" id="bTime" name="time" required />
+        </div>
+
+        <div class="field">
+          <label for="bName">Full name</label>
+          <input id="bName" name="name" type="text" placeholder="Jordan Rivera" required />
+        </div>
+        <div class="field">
+          <label for="bEmail">Email</label>
+          <input id="bEmail" name="email" type="email" placeholder="you@email.com" required />
+        </div>
+        <div class="field field-full">
+          <label for="bNotes">Notes (optional)</label>
+          <textarea id="bNotes" name="notes" rows="3" placeholder="Tell us your experience level, goals, or anything we should know…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-block">Request First Lesson</button>
+        <p class="form-msg" id="bookMsg" role="status" aria-live="polite"></p>
+      </form>
+      <aside class="book-aside">
+        <h3>Your first lesson</h3>
+        <ul>
+          <li><strong>Confirmation</strong> within 24 hours by email.</li>
+          <li><strong>Bring</strong> your racquet and water — we supply the balls (loaner racquets available).</li>
+          <li><strong>Arrive</strong> 10 minutes early so your coach can assess your level.</li>
+          <li><strong>Free reschedule</strong> up to 12 hours before your slot.</li>
+        </ul>
+        <div class="aside-card">
+          <span class="aside-turtle" aria-hidden="true"></span>
+          <p>"Slow is smooth, smooth is fast." Steady reps, real results — from your very first session.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="section shop" id="shop">
+    <div class="section-head">
+      <span class="tag">The Pro Shop</span>
+      <h2>Gear Up &amp; <span class="accent">Crush It</span></h2>
+      <p class="section-lead">Everything for your game — from Crush apparel to rackets, balls, training tools and bags.</p>
+    </div>
+    <div class="shop-tabs" id="shopTabs" role="tablist"></div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">ISLAND TENNIS</span>
+        <p>Tennis coaching, plus the Crush apparel line. Calm shell, fierce game.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#coaches">Coaches</a>
+        <a href="#book">Book a Lesson</a>
+        <a href="#shop">Shop</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@islandtennis.com">hello@islandtennis.com</a>
+        <a href="tel:+15555550123">(555) 555-0123</a>
+        <p>Island Tennis Academy<br />Open daily · 7am–8pm</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span id="year"></span> Island Tennis. All rights reserved.</p>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <button class="btn btn-block" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <script src="script.js?v=22"></script>
+</body>
+</html>
