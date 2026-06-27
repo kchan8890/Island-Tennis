@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/turtle.png" type="image/png" />
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
 
@@ -46,7 +46,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero" id="home">
+  <section class="hero panel" id="home" data-route="home">
     <div class="court-lines" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-copy">
@@ -70,7 +70,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="section about" id="about">
+  <section class="section panel about" id="about" data-route="about">
     <div class="section-head">
       <span class="tag">Meet the Founder</span>
       <h2>The story behind <span class="accent">Island Tennis</span></h2>
@@ -91,7 +91,7 @@
   </section>
 
   <!-- COACHES -->
-  <section class="section coaches" id="coaches">
+  <section class="section panel coaches" id="coaches" data-route="coaches">
     <div class="section-head">
       <span class="tag">The Team</span>
       <h2>Your <span class="accent">Coaches</span></h2>
@@ -102,8 +102,8 @@
     <div class="coach-grid" id="coachGrid"></div>
   </section>
 
-  <!-- ISLAND BAND -->
-  <section class="island-band" aria-label="Island lifestyle">
+  <!-- ISLAND BAND (part of Home) -->
+  <section class="island-band panel" aria-label="Island lifestyle" data-route="home">
     <div class="island-band-inner">
       <span class="tag">Our Island Home</span>
       <h2>Tennis in <span class="accent">Paradise</span></h2>
@@ -113,7 +113,7 @@
   </section>
 
   <!-- BOOK -->
-  <section class="section book" id="book">
+  <section class="section panel book" id="book" data-route="book">
     <div class="section-head">
       <span class="tag">New Clients</span>
       <h2>Book Your <span class="accent">First Lesson</span></h2>
@@ -194,7 +194,7 @@
   </section>
 
   <!-- SHOP -->
-  <section class="section shop" id="shop">
+  <section class="section panel shop" id="shop" data-route="shop">
     <div class="section-head">
       <span class="tag">The Pro Shop</span>
       <h2>Gear Up &amp; <span class="accent">Crush It</span></h2>
@@ -243,6 +243,6 @@
     </div>
   </aside>
 
-  <script src="script.js?v=22"></script>
+  <script src="script.js?v=23"></script>
 </body>
 </html>

@@ -359,5 +359,19 @@ navLinks.addEventListener("click", e => { if (e.target.tagName === "A") navLinks
 // ---- Footer year ----
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// ---- SPA panel router ----
+const ROUTES = ["home", "about", "coaches", "book", "shop"];
+function showRoute(route) {
+  if (!ROUTES.includes(route)) route = "home";
+  document.querySelectorAll(".panel").forEach(p =>
+    p.classList.toggle("is-active", p.dataset.route === route));
+  document.querySelectorAll(".nav-links a").forEach(a =>
+    a.classList.toggle("active", a.getAttribute("href") === "#" + route));
+  window.scrollTo(0, 0);
+}
+const routeFromHash = () => (location.hash || "#home").slice(1);
+window.addEventListener("hashchange", () => showRoute(routeFromHash()));
+showRoute(routeFromHash());
+
 // ---- Init ----
 renderCart();

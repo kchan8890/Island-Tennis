@@ -81,6 +81,13 @@ img, svg { display: block; max-width: 100%; }
 }
 .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
 
+/* ===== SPA Panels / Router ===== */
+.panel { display: none; }
+.panel.is-active { display: block; }
+.section.panel.is-active { min-height: 62vh; }            /* keep short panels from looking sparse */
+.nav-links a.active { color: var(--ink); }
+.nav-links a.active::after { width: 100%; }
+
 /* ===== Hero ===== */
 .hero {
   position: relative; overflow: hidden;
